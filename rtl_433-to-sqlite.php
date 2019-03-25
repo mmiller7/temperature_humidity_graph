@@ -68,7 +68,7 @@ function insertDbFunction($db_handle,$interval,$rxTimeStr,$sensorId,$sensorCh,$t
 {
 
 	//Convert time to UNIX format (seconds since epoch)
-	$rxTime=strtotime($rxTimeStrFixed);
+	$rxTime=strtotime($rxTimeStr);
 
 	//Get rounded down/up hours
 	$prevTime=intval($rxTime/$interval)*$interval; //3600 sec per hour, drop fractional part then multiply back
