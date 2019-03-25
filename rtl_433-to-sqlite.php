@@ -88,7 +88,7 @@ function insertDbFunction($db_handle,$interval,$rxTimeStr,$sensorId,$sensorCh,$t
 			echo "Inserting into database.";
 
 		//Build insert-statment for database
-		$query_string='INSERT INTO readings VALUES('.$prevTime.','.$rxTime.','.$sensorId.','.$sensorCh.','.$temperature.','.$humidity.','.$battery_low.')';
+		$query_string='INSERT INTO readings VALUES('.$prevTime.','.$rxTime.','.$sensorId.','.$sensorCh.','.$temperature.','.$humidity.','.$batteryLow.')';
 
 		//Insert into database
 		$db_handle->exec($query_string);

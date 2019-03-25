@@ -7,12 +7,12 @@ _term() {
 
 trap _term SIGTERM
 
-delay=10
+delay=1
 echo "`date` - Waiting $delay seconds before starting rtl_433..."
 sleep $delay
 echo "`date` - Attempting to start rtl_433 and pipe to php..."
 # the -M 40 specifies the sensor model
-/usr/local/bin/rtl_433  -M newmodel -R 40 -F json -C customary > >(/usr/bin/php /opt/power_meter_graph/rtl_433-to-sqlite.php) &
+/usr/local/bin/rtl_433  -M newmodel -R 40 -F json -C customary > >(/usr/bin/php ./rtl_433-to-sqlite.php) &
 child=$!
 
 echo "rtl_433 SDR process PID=$child"

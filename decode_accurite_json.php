@@ -42,9 +42,9 @@ Outputs:
 		$rxTimeStr=$record->{'time'};
 		$sensorId=$record->{'id'};
 		$sensorCh=$record->{'channel'};
-		$temperature==$record->{'temperature_F'};
+		$temperature=$record->{'temperature_F'};
 		//TODO: Maybe make it accept C or F temperature instead of just F
-		$humidity=$record->{'hummidity'};
+		$humidity=$record->{'humidity'};
 		$batteryLow=$record->{'battery_low'};
   }
 ?>
